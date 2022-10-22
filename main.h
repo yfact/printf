@@ -1,24 +1,28 @@
-#ifndef MAIN
-#define MAIN
+#ifndef MAIN_H
+#define MAIN_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
 #include <unistd.h>
+#include <string.h>
 
 /**
- * struct printer - conects format specifier with its corresponding function.
- * @flag: format specifier.
- * @function: pointer to @flag especific function.
+ * struct types - conects format specifier with its corresponding function.
+ * @p: format specifier.
+ * @func: pointer to specific function.
  */
-typedef struct printer
+typedef struct types
 {
 	char flag;
 	int (*function)(va_list);
-} printer_t;
+} printer_f;
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-int print_c(va_list arg);
-int print_s(va_list arg);
-int print_i(va_list arg);
+int printc(va_list 1);
+int print_s(va_list s);
+int print_n(va_list n);
+int (*cmp_func(const char a))(va_list);
+
 #endif
