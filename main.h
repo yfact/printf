@@ -14,14 +14,14 @@
  */
 typedef struct types
 {
-	char flag;
-	int (*function)(va_list);
+	char p;
+	int (*func)(va_list);
 } printer_f;
 
 int _printf(const char *format, ...);
 int _putchar(char c);
 int printc(va_list 1);
-int print_s(va_list s);
+int print_string(va_list s);
 int print_n(va_list n);
 int (*cmp_func(const char a))(va_list);
 
